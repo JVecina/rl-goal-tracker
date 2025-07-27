@@ -225,7 +225,7 @@ public class GoalTrackerPlugin extends Plugin
     @Subscribe
     public void onChatMessage(ChatMessage event)
     {
-        if (event.getType() != ChatMessageType.GAMEMESSAGE || !event.getMessage().contains("Quest complete")) return;
+        if (event.getType() != ChatMessageType.GAMEMESSAGE || !event.getMessage().contains("completed a quest:")) return;
 
         List<QuestTask> questTasks = goalManager.getIncompleteTasksByType(TaskType.QUEST);
         for (QuestTask task : questTasks) {
